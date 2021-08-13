@@ -10,6 +10,7 @@ def init():
     screen.bgcolor("CornFlowerBlue")
     sh_names = ["bag.gif", "bottle.gif", "net.gif", "straw.gif"]
     screen.addshape("back.gif")
+    screen.addshape("fish.gif")
     for fname in sh_names:
         screen.addshape(fname)
 
@@ -17,17 +18,22 @@ def init():
     card_type = ["bag", "bottle", "net", "straw"] * 2
     card_type.append("fish")
     shuffle(card_type)
-    card_pos = [(-200,-200),(0,-200),(200,-200),(-200,0),(0,0),(200,0),(-200,200),(0,200),(200,200)]
+    card_pos = [(-135,-135),(0,-135),(135,-135),(-135,0),(0,0),(135,0),(-135,135),(0,135),(135,135)]
+
     cards = []
     for num in range(9):
         t = turtle.Turtle()
         t.front = card_type[num]
         t.shape("back.gif")
+        t.penup()
         t.goto(card_pos[num])
-      
+        sleep(1)
         cards.append(t)
-        cards[num].shape(card_type[num]+".gif")
+        # cards[num].shape(card_type[num]+".gif")
 
+    numb = []
+    for num in range(6):
+      t = turtle.Turlte()
 
 if __name__ == "__main__":
     init()
