@@ -19,6 +19,7 @@ def init():
     card_type.append("fish")
     shuffle(card_type)
     card_pos = [(-135,-135),(0,-135),(135,-135),(-135,0),(0,0),(135,0),(-135,135),(0,135),(135,135)]
+    numb_pos = [(-200,-200),(65,-200),(200,-200),(-200,65),(-200,200),(-200,65)]
 
     cards = []
     for num in range(9):
@@ -33,7 +34,12 @@ def init():
 
     numb = []
     for num in range(6):
-      t = turtle.Turlte()
+      t = turtle.Turtle()
+      t.penup()
+      t.goto(numb_pos[num])
+      t.pendown()
+      t.write ("1")
+
 
 if __name__ == "__main__":
     init()
